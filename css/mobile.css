@@ -68,7 +68,7 @@
     margin-top: 0;
 }
 
-.réservation__btn {
+.btn-purple {
     width: 218px;
     height: 50px;
     border-radius: 50px;
@@ -179,7 +179,7 @@
     font-size: 22px;
 }
 
-.badge {
+.badge-new {
     background-color: #99E2D0;
     padding: 4px 8px;
     text-align: center;
