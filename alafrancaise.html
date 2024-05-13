@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ladelicedessens</title>
+        <title>À la française</title>
         <link rel="stylesheet" href="css/mobile.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,79 +13,101 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="main-container">
-        <header>
+        <header class="header__menu">
             <i class="fa-solid fa-arrow-left"></i>
-            <img src="ImagesettextesOhmyfood /images/logo/ohmyfood.png" alt="logo de oh my food">
+            <img class="header__logo-menu" src="ImagesettextesOhmyfood /images/logo/ohmyfood.png" alt="logo de oh my food">
         </header>
         <main>
-           <div class="banniere">
-                <img src="ImagesettextesOhmyfood /images/restaurants/lapalettedugout.jpg" alt="image du restaurant">
-           </div>
+                <img class="banniere" src="ImagesettextesOhmyfood /images/restaurants/lapalettedugout.jpg" alt="image du restaurant">
+
            <div class="menu">
-               <h1 class="menu-title">Le délice des sens</h1>
-               <button class="heart"><i class="fa-regular fa-heart"></i></button>
+               <h1 class="menu-title">À la française</h1>
+               <button class="heart menu-heart"><i class="fa-regular fa-heart"></i></button>
            </div>
-           <section class="entree">
-                <h2 class="entree-title">ENTRÉES</h2>
-                    <div class="entree-card">
-                        <h3 class="card-title">Tartare de poulpe acidulé</h3>
-                        <p class="card-subtitle">Aux zestes d'orange</p>
+           <section class="section-menu">
+                <h2 class="section__title">ENTRÉES</h2>
+                    <div class="section__card">
+                        <div class="section__content">
+                            <h3 class="card-title">Tartare de poulpe acidulé</h3>
+                            <p class="card-subtitle">Aux zestes d'orange</p>
+                        </div>
                         <p class="card-price">25€</p>
                     </div>
-                    <div class="entree-card">
-                        <h3 class="card-title">Velouté de légumes d'antan</h3>
-                        <p class="card-subtitle">Carotte, panais, topinambour</p>
+                    <div class="section__card">
+                        <div class="section__content">
+                            <h3 class="card-title">Velouté de légumes d'antan</h3>
+                            <p class="card-subtitle">Carotte, panais, topinambour</p>
+                        </div>
                         <p class="card-price">35€</p>
                     </div>
-                    <div class="entree-card">
-                        <h3 class="card-title">Soupe à l'oignon</h3>
-                        <p class="card-subtitle">Revisitée</p>
+                    <div class="section__card">
+                        <div class="section__content">
+                            <h3 class="card-title">Soupe à l'oignon</h3>
+                            <p class="card-subtitle">Revisitée</p>
+                        </div>
                         <p class="card-price">20€</p>
                     </div>
            </section>
-           <section class="plat">
-            <h2>PLATS</h2>
-                <div class="plat-card">
-                    <h3 class="card-title">Coquilles Saint-Jacques</h3>
-                    <p class="card-subtitle">Accompagnées d'une purée de panais</p>
+           <section class="section-menu">
+            <h2 class="section__title">PLATS</h2>
+                <div class="section__card">
+                    <div class="section__content">
+                        <h3 class="card-title">Coquilles Saint-Jacques</h3>
+                        <p class="card-subtitle">Accompagnées d'une purée de panais</p>
+                    </div>
                     <p class="card-price">40€</p>
                 </div>
-                <div class="plat-card">
-                    <h3 class="card-title">Magret de canard</h3>
-                    <p class="card-subtitle">Et parmentier de pommes de terre</p>
+                <div class="section__card">
+                    <div class="section__content">
+                        <h3 class="card-title">Magret de canard</h3>
+                        <p class="card-subtitle">Et parmentier de pommes de terre</p>
+                    </div>
                     <p class="card-price">35€</p>
                 </div>
-                <div class="plat-card">
-                    <h3 class="card-title">Pigeonneau d’Ille-et-Vilaine</h3>
-                    <p class="card-subtitle">Sur son lit de gnocchis aux légumes</p>
+                <div class="section__card">
+                    <div class="section__content">
+                        <h3 class="card-title">Pigeonneau d’Ille-et-Vilaine</h3>
+                        <p class="card-subtitle">Sur son lit de gnocchis aux légumes</p>
+                    </div>
                     <p class="card-price">44€</p>
                 </div>
        </section>
-       <section class="dessert">
-        <h2>DESSERTS</h2>
-            <div class="dessert-card">
-                <h3 class="card-title">Pétales de violettes glacés</h3>
-                <p class="card-subtitle">Et purée de noisettes</p>
+       <section class="section-menu">
+        <h2 class="section__title">DESSERTS</h2>
+            <div class="section__card">
+                <div class="section__content">
+                    <h3 class="card-title">Pétales de violettes glacés</h3>
+                    <p class="card-subtitle">Et purée de noisettes</p>
+                </div>
                 <p class="card-price">18€</p>
             </div>
-            <div class="dessert-card">
-                <h3 class="card-title">Fondant au chocolat</h3>
-                <p class="card-subtitle">Revisitée</p>
+            <div class="section__card">
+                <div class="section__content">
+                    <h3 class="card-title">Fondant au chocolat</h3>
+                    <p class="card-subtitle">Revisitée</p>
+                </div>
                 <p class="card-price">22€</p>
             </div>
-            <div class="dessert-card">
-                <h3 class="card-title">Millefeuille croustillant</h3>
-                <p class="card-subtitle">Myrtilles et pâte d’amande</p>
+            <div class="section__card">
+                <div class="section__content">
+                    <h3 class="card-title">Millefeuille croustillant</h3>
+                    <p class="card-subtitle">Myrtilles et pâte d’amande</p>
+                </div>
                 <p class="card-price">23€</p>
             </div>
    </section>
-   <button class="btn-purple">Commander</button>        
+    <section class="section__btn">
+    <button class="btn-purple">Commander</button>  
+    </section>      
         </main>
         <footer class="footer">
-            <img class="footer__logo" src="ImagesettextesOhmyfood /images/logo/ohmyfood@2x.svg" alt="logo oh my food">
+            <div class="footer__logo">ohmyfood</div>
             <div class="footer__link">
                 <div class="footer__link-icon">
                     <i class="fa-solid fa-utensils"></i>

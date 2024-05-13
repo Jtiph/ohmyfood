@@ -13,79 +13,100 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="main-container">
-        <header>
-            <i class="fa-solid fa-arrow-left"></i>
-            <img src="ImagesettextesOhmyfood /images/logo/ohmyfood.png" alt="logo de oh my food">
+        <header class="header__menu">
+            <i class="fa-solid fa-arrow-left header__menu-icon"></i>
+            <img class="header__logo-menu" src="ImagesettextesOhmyfood /images/logo/ohmyfood.png" alt="logo de oh my food">
         </header>
         <main>
-           <div class="banniere">
-                <img src="ImagesettextesOhmyfood /images/restaurants/lapalettedugout.jpg" alt="image du restaurant">
-           </div>
+                <img class="banniere" src="ImagesettextesOhmyfood /images/restaurants/lapalettedugout.jpg" alt="image du restaurant">
            <div class="menu">
                <h1 class="menu-title">Le délice des sens</h1>
-               <button class="heart"><i class="fa-regular fa-heart"></i></button>
+               <button class="heart menu-heart"><i class="fa-regular fa-heart"></i></button>
            </div>
-           <section class="entree">
-                <h2 class="entree-title">ENTRÉES</h2>
-                    <div class="entree-card">
-                        <h3 class="card-title">Tartare de thon</h3>
-                        <p class="card-subtitle">Assaisonné au yuzu</p>
-                        <p class="card-price">25€</p>
+           <section class="section-menu">
+                <h2 class="section__title">ENTRÉES</h2>
+                    <div class="section__card">
+                        <div class="section__content">
+                            <h3 class="card-title">Tartare de thon</h3>
+                            <p class="card-subtitle">Assaisonné au yuzu</p>
+                        </div>
+                        <span class="card-price">25€</span>
                     </div>
-                    <div class="entree-card">
-                        <h3 class="card-title">Bouchée de homard croustillant </h3>
-                        <p class="card-subtitle">Et sa farandole de petits légumes</p>
-                        <p class="card-price">35€</p>
+                    <div class="section__card">
+                        <div class="section__content">
+                            <h3 class="card-title">Bouchée de homard croustillant </h3>
+                            <p class="card-subtitle">Et sa farandole de petits légumes</p>
+                        </div>
+                        <span class="card-price">35€</span>
                     </div>
-                    <div class="entree-card">
-                        <h3 class="card-title">Poulet rôti aux herbes de Provence</h3>
-                        <p class="card-subtitle">Et sa crème de truffe</p>
-                        <p class="card-price">40€</p>
+                    <div class="section__card">
+                        <div class="section__content">
+                            <h3 class="card-title">Poulet rôti aux herbes de Provence</h3>
+                            <p class="card-subtitle">Et sa crème de truffe</p>
+                        </div>
+                        <span class="card-price">40€</span>
                     </div>
            </section>
-           <section class="plat">
-            <h2>PLATS</h2>
-                <div class="plat-card">
-                    <h3 class="card-title">Poulet rôti aux herbes de Provence</h3>
-                    <p class="card-subtitle">Et sa crème de truffe</p>
-                    <p class="card-price">40€</p>
+           <section class="section-menu">
+            <h2 class="section__title">PLATS</h2>
+                <div class="section__card">
+                    <div class="section__content">
+                        <h3 class="card-title">Poulet rôti aux herbes de Provence</h3> <!-- est déjà dans l'entrée -->
+                        <p class="card-subtitle">Et sa crème de truffe</p>
+                    </div>
+                    <span class="card-price">40€</span>
                 </div>
-                <div class="plat-card">
-                    <h3 class="card-title">Langouste rôtie</h3>
-                    <p class="card-subtitle">Et ses légumes de saison</p>
-                    <p class="card-price">35€</p>
+                <div class="section__card">
+                    <div class="section__content">
+                        <h3 class="card-title">Langouste rôtie</h3>
+                        <p class="card-subtitle">Et ses légumes de saison</p>
+                    </div>
+                    <span class="card-price">35€</span>
                 </div>
-                <div class="plat-card">
-                    <h3 class="card-title">Côte de bœuf Angus</h3>
-                    <p class="card-subtitle">Et sa purée de panais</p>
-                    <p class="card-price">44€</p>
+                <div class="section__card">
+                    <div class="section__content">
+                        <h3 class="card-title">Côte de bœuf Angus</h3>
+                        <p class="card-subtitle">Et sa purée de panais</p>
+                    </div>
+                    <span class="card-price">44€</span>
                 </div>
        </section>
-       <section class="dessert">
-        <h2>DESSERTS</h2>
-            <div class="dessert-card">
-                <h3 class="card-title">Farandole de desserts</h3>
-                <p class="card-subtitle">Du chef</p>
-                <p class="card-price">18€</p>
+       <section class="section-menu">
+        <h2 class="section__title">DESSERTS</h2>
+            <div class="section__card">
+                <div class="section__content">
+                    <h3 class="card-title">Farandole de desserts</h3>
+                    <p class="card-subtitle">Du chef</p>
+                </div>
+                <span class="card-price">18€</span>
             </div>
-            <div class="dessert-card">
-                <h3 class="card-title">Crème brulée</h3>
-                <p class="card-subtitle">Revisitée</p>
-                <p class="card-price">22€</p>
+            <div class="section__card">
+                <div class="section__content">
+                    <h3 class="card-title">Crème brulée</h3>
+                    <p class="card-subtitle">Revisitée</p>
+                </div>
+                <span class="card-price">22€</span>
             </div>
-            <div class="dessert-card">
-                <h3 class="card-title">Tiramisu</h3>
-                <p class="card-subtitle">À la noisette</p>
-                <p class="card-price">23€</p>
+            <div class="section__card">
+                <div class="section__content">
+                    <h3 class="card-title">Tiramisu</h3>
+                    <p class="card-subtitle">À la noisette</p>
+                </div>
+                <span class="card-price">23€</span>
             </div>
    </section>
-   <button class="btn-purple">Commander</button>        
+    <section class="section__btn">
+   <button class="btn-purple">Commander</button>
+    </section>        
         </main>
         <footer class="footer">
-            <img class="footer__logo" src="ImagesettextesOhmyfood /images/logo/ohmyfood@2x.svg" alt="logo oh my food">
+            <div class="footer__logo">ohmyfood</div>
             <div class="footer__link">
                 <div class="footer__link-icon">
                     <i class="fa-solid fa-utensils"></i>
