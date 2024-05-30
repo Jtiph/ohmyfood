@@ -99,15 +99,13 @@ $white: #FFFFFF;
     flex-direction: column;
     align-items: center;
     background-color: white;
-}
-.header__logo{
-    height: 36px;
-    object-fit: contain;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.header__icon{
+    &__logo{
+        height: 36px;
+        object-fit: contain;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    &__icon{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -129,27 +127,33 @@ $white: #FFFFFF;
         }
 }
 
+}
+
+
+
+
 /********SECTION RESERVATION*********/
 .hero{
     text-align: center;
     height: 280px;
     padding-top: 57px;
     background-color: #F6F6F6;
+    &__title {
+        font-size: 24px;
+    } 
+    
+    &__subtitle {
+        width: 100%;
+        height: 46px;
+        font-weight: 300;
+        font-size: 18px;
+        margin-top: 0;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
 }
 
-.hero__title {
-    font-size: 24px;
-} 
 
-.hero__subtitle {
-    width: 100%;
-    height: 46px;
-    font-weight: 300;
-    font-size: 18px;
-    margin-top: 0;
-    line-height: 26px;
-    margin-bottom: 30px;
-}
 
 .btn__purple {
     width: 55%;
@@ -177,20 +181,19 @@ $white: #FFFFFF;
     gap: 32px;
     border: #9356DC;
     background-color: white; 
-}
-.tuto__title{
-    margin: 0;
-    padding-left: 20px;
-}
-
-.tuto__steps{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px; 
-}
-
+    &__title{
+        margin: 0;
+        padding-left: 20px;
+    }
+    
+    &__steps{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px; 
+    }
+}   
 .tuto__step {
     width: 82%;
     height: 72.38px;
@@ -212,16 +215,18 @@ $white: #FFFFFF;
     gap: 25px;
     width: 79%;
 }
-        
+            
 .tuto__icon{
     color: #7E7E7E;
     font-size: 20px;
 }
-        
+            
 .tuto__text{
     font-size: 16px;
     font-weight: 500;   
 }
+
+
 
 .badge-purple{
     background-color: #9356DC;
@@ -238,13 +243,14 @@ $white: #FFFFFF;
     height: 1351px;
     margin-top: 30px;
     @include no-padding;
-    background-color: #F6F6F6;  
+    background-color: #F6F6F6;
+    &__title {
+        padding-top: 46px;
+        padding-left: 20px;
+        padding-bottom: 15px;
+    }  
 }  
-.restaurants__title {
-    padding-top: 46px;
-    padding-left: 20px;
-    padding-bottom: 15px;
-}
+
 
 
 .cards {
@@ -260,14 +266,15 @@ $white: #FFFFFF;
     border-radius: 20px;
     background-color: white;
     position: relative;
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        height: 174px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
 }
-.card__img {
-    width: 100%;
-    object-fit: cover;
-    height: 174px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
+
 
 .card__content {
     display: flex;
@@ -377,11 +384,15 @@ $white: #FFFFFF;
     position: relative;
     width: 20%;
     
+    
 }
 .menu__like--nobg{
     position: absolute;
     top: 20%;
     left: 25%;
+    &:active{
+        opacity: 0;
+    }
 
 }
 .menu__like--bg {
@@ -420,11 +431,12 @@ $white: #FFFFFF;
     align-items: center;
     flex-direction: column;
     gap: 22px;
-    @for $i from 1 through 4 {
-        &:nth-child(#{$i}){
-            animation-delay: 100ms * $i;
+    animation: appear 1s;
+    @for $i from 0 to 9 {
+        .delay-#{$i} {
+          animation-delay:  #{$i/10}s;
         }
-    }
+      }
 }
 .menuItems__card{
     border-radius: 15.04px;
