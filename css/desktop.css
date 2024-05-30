@@ -8,18 +8,29 @@
     
     .header__homepage {
         width: 100%;
-
-
-    }
-    .header__logo {
+          
+        .header__homepage--logo {
         width: 15%;
         height: 36px;
         padding-top: 14px;
         padding-left: 12px;
         
     }
+        .header__homepage--icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        background-color: #EAEAEA;
+        width: 100%;
+        box-shadow: 0px 4px 4px 0px #00000040;
+    
+    }
+    }
+    
    
-    .réservation__title{
+    .reservation__title{
         font-size: 40px;
     }
    .btn--purple{
@@ -60,38 +71,39 @@
         width: 15%;
         left: 77%;
    }
-   .description{
+   .card__description{
         width: 87%;
    }
    .footer{
-        height: 114px;
-        display: flex;
-        flex-direction: row-reverse;
-        width: 97%;
-        margin-top: -43px;
-   }
-   .footer__content{
-        display: flex;
-        width: 20%;
-        flex-direction: row-reverse;
-        align-items: flex-end;
-        gap: 90px;
-        padding-right: 80px;
-   }
-   
-   .footer__link{
-        flex-direction: row;
-        align-items: end;
-        gap: 50px;
-   }
-   .footer__link a{
-        white-space: nowrap;
-        text-decoration: none;
-        color: inherit;
-   }
-   .footer__link-text{
-        display: flex;
-        gap: 23px;
+     height: 114px;
+     display: flex;
+     flex-direction: row-reverse;
+     width: 97%;
+     margin-top: -43px;
+
+.footer__content{
+     display: flex;
+     width: 20%;
+     flex-direction: row-reverse;
+     align-items: flex-end;
+     gap: 90px;
+     padding-right: 80px;
+}
+
+.footer__link{
+     flex-direction: row;
+     align-items: end;
+     gap: 50px;
+     & a{
+     white-space: nowrap;
+     text-decoration: none;
+     color: inherit;
+     }
+     &--text{
+         display: flex;
+         gap: 23px;
+     }
+}
 }
 
 /*restaurants*/

@@ -21,6 +21,7 @@
     width: 100%;
     animation: loader 1s;
     z-index: 1000;
+
 }
 .dots {
     width: 56px;
@@ -31,7 +32,7 @@
     background-size: calc(100%/3) 13.4px;
     background-repeat: no-repeat;
     animation: dots-7ar3yq 1s infinite linear;
- }
+}
  @keyframes dots-7ar3yq {
     20% {
        background-position: 0%   0%, 50%  50%,100%  50%;
@@ -48,9 +49,7 @@
     80% {
        background-position: 0%  50%, 50%  50%,100% 100%;
     }
- }
- 
- 
+}
 .header__homepage {
     width: 100%;
     height: 63px;
@@ -59,17 +58,14 @@
     align-items: center;
     background-color: white;
     gap: 10px;
-}
-
-.header__logo {
+  }
+  .header__homepage--logo {
     width: 50%;
     height: 36px;
     padding-top: 14px;
     padding-left: 12px;
-    
-}
-
-.header__icon {
+  }
+  .header__homepage--icon {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -78,10 +74,9 @@
     background-color: #EAEAEA;
     width: 100%;
     box-shadow: 0px 4px 4px 0px #00000040;
+  }
 
-}
-
-.section--réservation {
+  .section--reservation {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -93,7 +88,7 @@
     background-color: #f6f3f6;
 }
 
-.réservation__title {
+.reservation__title {
     height: 68px;
     width: 100%;
     text-align: center;
@@ -101,7 +96,7 @@
     margin: 0;
 }
 
-.réservation__text {
+.reservation__text {
     width: 100%;
     height: 46px;
     font-size: 18px;
@@ -228,7 +223,7 @@
     gap: 10px;
 }
 
-.description {
+.card__description {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -270,53 +265,6 @@
     justify-content: center;
     align-items: center;
 }
-
-.footer {
-    background-color: #353535;
-    width: 100%;
-    height: 186px;
-    color: white;
-    padding: 22px 25px 22px 25px;
-    margin-top: -41px;
-
-    .footer__logo {
-    width: 100%;
-    height: 27px;
-    font-family: 'Shrikhand';
-    font-size: 18px;
-    }
-   
-
-}
-
-.footer__logo {
-    
-}
-
-.footer__link {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    height: 99px;
-    padding-top: 20px;
-}
-
-
-.footer__link--icon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 19px;
-    gap: 16px;
-}
-
-
-.footer__link--color {
-    color: inherit;
-    text-decoration: none;
-}
-
-
 
 /*restaurants*/
 .header__menu{

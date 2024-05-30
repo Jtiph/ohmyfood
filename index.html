@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="scss/mobile.scss">
+    <link rel="stylesheet" href="scss/desktop.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,103 +19,101 @@
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body> 
-    <div class="loader">
-        <div class="dots"></div>
-    </div>
     <div class="main-container">
-        <header class="header__homepage">
+    <div class="loader"><div class="dots"></div></div>
+        <header class="header">
             <img class="header__logo" src="ImagesettextesOhmyfood /images/logo/ohmyfood.png" alt="logo de oh my food">
             <div class="header__icon">
-                <i class="fa-solid fa-location-dot iconlieu"></i>
-                <p>Paris, Belleville</p>
+                <i class="fa-solid fa-location-dot header__icon--lieu"></i>
+                <p class="header__icon--text">Paris, Belleville</p>
             </div>
         </header>
         <main class="main">
-            <section class="section--réservation">
-                <h1 class="réservation__title"> Réservez le menu qui vous convient</h1>
-                <p class="réservation__text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button class="btn--purple"> Explorer nos restaurants</button>
-            </section>
-            <section class="section--fonctionnement">
-                <h1 class="fonctionnement__title">Fonctionnement</h1>
-                <div class="fonctionnement__btn">
-                    <article class="btn--grey">
-                        <span class="badge-number">1</span>
-                        <div class="btn__content">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <p>Choisissez un restaurant</p>
+            <section class="hero">
+                <h1 class="hero__title"> Réservez le menu qui vous convient</h1>
+                <p class="hero__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <button class="btn__purple"> Explorer nos restaurants</button>
+            </section> 
+            <section class="tuto">
+                <h1 class="tuto__title">Fonctionnement</h1>
+                <div class="tuto__steps">
+                    <article class="tuto__step">
+                        <span class="badge badge-purple">1</span>
+                        <div class="tuto__content">
+                            <i class="fa-solid fa-mobile-screen-button tuto__icon"></i>
+                            <p class="tuto__text">Choisissez un restaurant</p>
                         </div>
                     
                     </article>
-                    <article class="btn-grey">
-                        <span class="badge-number">2</span>
-                        <div class="btn__content">
-                            <i class="fa-solid fa-list-ul"></i>
-                            <p>Composez votre menu</p>
+                    <article class="tuto__step">
+                        <span class="badge badge-purple">2</span>
+                        <div class="tuto__content">
+                            <i class="fa-solid fa-list-ul tuto__icon"></i>
+                            <p class="tuto__text">Composez votre menu</p>
                         </div>
                     </article>
-                    <article class="btn-grey">
-                        <span class="badge-number">3</span>
-                         <div class="btn__content">
-                             <i class="fa-solid fa-store"></i>
-                             <p>Dégustez au restaurant</p>
+                    <article class="tuto__step">
+                        <span class="badge badge-purple">3</span>
+                         <div class="tuto__content">
+                             <i class="fa-solid fa-store tuto__icon"></i>
+                             <p class="tuto__text">Dégustez au restaurant</p>
                          </div>
                     </article>
                 </div>
             </section>
-            <section class="section--restaurants">
+            <section class="restaurants">
                 <h1 class="restaurants__title">Restaurants</h1>
-                <div class="allcards">
+                <div class="cards">
                     <div class="card">
-                       <a href="lapalettedugout.html"><img src="ImagesettextesOhmyfood /images/restaurants/lapalettedugout.jpg"
+                       <a href="lapalettedugout.html"><img class="card__img" src="ImagesettextesOhmyfood /images/restaurants/lapalettedugout.jpg"
                             alt="image du restaurant"></a> 
-                        <span class="badge-vert">Nouveau</span>
+                        <span class="badge badge-vert">Nouveau</span>
                         <div class="card__content">
-                            <div class="description">
+                            <div class="card__description">
                                 <h2 class="card__title">La palette du goût</h2>
                                 <p class="card__subtitle">Ménilmontant</p>
                             </div>
-                            <button class="heart"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn-heart"><i class="fa-regular fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="card">
                         <a href="lanoteenchantee.html">
-                            <img src="ImagesettextesOhmyfood /images/restaurants/lanoteenchantee.jpg"
+                            <img class="card__img" src="ImagesettextesOhmyfood /images/restaurants/lanoteenchantee.jpg"
                                 alt="image du restaurant">
                         </a>
-                        <span class="badge-vert">Nouveau</span>
+                        <span class="badge badge-vert">Nouveau</span>
                         <div class="card__content">
-                            <div class="description">
+                            <div class="card__description">
                                 <h2 class="card__title">La note enchantée</h2>
                                 <p class="card__subtitle">Charonne</p>
                             </div>
-                            <button class="heart"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn-heart"><i class="fa-regular fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="card">
                         <a href="alafrancaise.html">
-                            <img src="ImagesettextesOhmyfood /images/restaurants/alafrancaise.jpg"
+                            <img class="card__img" src="ImagesettextesOhmyfood /images/restaurants/alafrancaise.jpg"
                                 alt="image du restaurant">
                         </a>
                         <div class="card__content">
-                            <div class="description">
+                            <div class="card__description">
                                 <h2 class="card__title">À la française</h2>
                                 <p class="card__subtitle">Cité rouge</p>
                             </div>
-                            <button class="heart"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn-heart"><i class="fa-regular fa-heart"></i></button>
                         </div>
                     </div>
                     <div class="card">
                         <a href="ledelicedessens.html">
-                            <img src="ImagesettextesOhmyfood /images/restaurants/ledelicedessens.jpg"
+                            <img class="card__img" src="ImagesettextesOhmyfood /images/restaurants/ledelicedessens.jpg"
                                 alt="image du restaurant">
                         </a>
-                        <div class="card-content">
-                            <div class="description">
-                                <h2 class="card-title">Le délice des sens</h2>
-                                <p class="card-subtitle">Folie-Méricourt</p>
+                        <div class="card__content">
+                            <div class="card__description">
+                                <h2 class="card__title">Le délice des sens</h2>
+                                <p class="card__subtitle">Folie-Méricourt</p>
                             </div>
-                            <button class="heart"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn-heart"><i class="fa-regular fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
@@ -126,10 +124,14 @@
             <div class="footer__logo">ohmyfood</div>
             <div class="footer__link">
                 <div class="footer__link--icon">
-                    <i class="fa-solid fa-utensils"></i>
-                    <a class="footer__link--color" href="#">Proposer un restaurant</a>
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <a class="footer__link--color" href="#">Devenir partenaire</a>
+                        <div class="icon-space">
+                            <i class="fa-solid fa-utensils"></i>
+                            <a class="footer__link--color" href="#">Proposer un restaurant</a>
+                        </div>
+                        <div class="icon-space">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                            <a class="footer__link--color" href="#">Devenir partenaire</a>
+                        </div>
                 </div>               
                 <div class="footer__link--text">
                     <a class="footer__link--color" href="#">Mentions légales</a>
