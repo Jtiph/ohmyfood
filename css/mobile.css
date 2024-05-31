@@ -47,10 +47,21 @@ body {
     transform: scale(1);
   }
 }
-@keyframes slow-appear {}
+@keyframes slow-appear {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*loader*/
 .loader {
   position: fixed;
-  background-color: white;
+  background-color: #FFFFFF;
   inset: 0;
   z-index: 1;
   opacity: 1;
@@ -74,9 +85,9 @@ body {
 .header {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: white;
+  flex-direction: column;
+  background-color: #FFFFFF;
 }
 .header__logo {
   height: 36px;
@@ -86,9 +97,9 @@ body {
 }
 .header__icon {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   gap: 17px;
   background-color: #EAEAEA;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
@@ -97,6 +108,7 @@ body {
 }
 .header__icon--lieu {
   font-size: 18px;
+  color: #353535;
 }
 .header__icon--text {
   font-size: 16px;
@@ -128,7 +140,7 @@ body {
   height: 50px;
   border-radius: 50px;
   background: linear-gradient(#ff79da, #9356DC);
-  color: white;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
   border: #9356DC;
@@ -136,7 +148,7 @@ body {
   transition-duration: 0.25s;
 }
 .btn__purple:active {
-  background-color: white;
+  background-color: #FFFFFF;
   box-shadow: 0px 4.01px 15.04px 0px black;
 }
 
@@ -148,7 +160,7 @@ body {
   height: 440px;
   gap: 32px;
   border: #9356DC;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .tuto__title {
   margin: 0;
@@ -157,47 +169,46 @@ body {
 .tuto__steps {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   gap: 22px;
 }
-
 .tuto__step {
   width: 82%;
   height: 72.38px;
-  border-radius: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 20px;
+  justify-content: center;
   gap: 22px;
   background-color: #F3F3F3;
   border: #F3F3F3;
   box-shadow: 0 3px 10px darkgray;
   position: relative;
 }
-
 .tuto__content {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
   gap: 25px;
   width: 79%;
 }
-
 .tuto__icon {
   color: #7E7E7E;
   font-size: 20px;
 }
-
-.tuto__text {
+.tuto__icon--lieu {
+  font-size: 18px;
+}
+.tuto--text {
   font-size: 16px;
   font-weight: 500;
 }
 
 .badge-purple {
   background-color: #9356DC;
-  color: white;
+  color: #FFFFFF;
   width: 9%;
   height: 26px;
   right: 96%;
@@ -220,8 +231,8 @@ body {
 
 .cards {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -229,7 +240,7 @@ body {
   width: 93%;
   height: 251px;
   border-radius: 20px;
-  background-color: white;
+  background-color: #FFFFFF;
   position: relative;
 }
 .card__img {
@@ -239,13 +250,11 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-
 .card__content {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-
 .card__description {
   display: flex;
   flex-direction: column;
@@ -254,14 +263,12 @@ body {
   padding-top: 5px;
   width: 79%;
 }
-
 .card__title {
   font-weight: 500;
   font-size: 18px;
   white-space: nowrap;
   margin: 0;
 }
-
 .card__subtitle {
   margin: 0;
   font-weight: 300;
@@ -269,11 +276,29 @@ body {
   white-space: nowrap;
 }
 
-.btn-heart {
+.btn__like {
   background: none;
   border: none;
   font-size: 22px;
   cursor: pointer;
+  position: relative;
+}
+.btn__like--nobg:active {
+  opacity: 0;
+}
+.btn__like--bg {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  opacity: 0;
+  bottom: 30%;
+  left: 12%;
+  font-size: 23px;
+}
+.btn__like--bg:active {
+  opacity: 1;
 }
 
 .badge-vert {
@@ -295,13 +320,11 @@ body {
   display: flex;
   align-items: center;
 }
-
 .header__menu--icon {
   font-size: 17.02px;
   margin-left: 15px;
   color: black;
 }
-
 .header__menu--logo {
   height: 36px;
   object-fit: contain;
@@ -327,13 +350,11 @@ body {
   padding-top: 20px;
   background-color: #F6F6F6;
 }
-
 .menu__header {
   display: flex;
   gap: 15px;
   margin-top: 32px;
 }
-
 .menu__title {
   height: 29px;
   font-family: "Shrikhand", sans-serif;
@@ -343,7 +364,6 @@ body {
   margin: 0;
   width: 100%;
 }
-
 .menu__btn {
   font-size: 25px;
   border: none;
@@ -363,12 +383,15 @@ body {
 }
 
 .menu__like--bg {
-  color: #ff79da;
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text; /*élement pour que ce soit adapter à tous les navigateurs*/
   position: absolute;
   border: transparent;
-  opacity: 0;
   top: 18%;
   left: 25%;
+  opacity: 0;
 }
 .menu__like--bg:active {
   opacity: 1;
@@ -382,7 +405,7 @@ body {
   flex-direction: column;
   margin-top: 73px;
 }
-.submenu .submenu__title {
+.submenu__title {
   width: 12%;
   height: 27px;
   font-weight: 300;
@@ -396,36 +419,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 22px;
-  animation: appear 1s;
 }
-.menuItems .delay-0 {
-  animation-delay: 0s;
-}
-.menuItems .delay-1 {
-  animation-delay: 0.1s;
-}
-.menuItems .delay-2 {
-  animation-delay: 0.2s;
-}
-.menuItems .delay-3 {
-  animation-delay: 0.3s;
-}
-.menuItems .delay-4 {
-  animation-delay: 0.4s;
-}
-.menuItems .delay-5 {
-  animation-delay: 0.5s;
-}
-.menuItems .delay-6 {
-  animation-delay: 0.6s;
-}
-.menuItems .delay-7 {
-  animation-delay: 0.7s;
-}
-.menuItems .delay-8 {
-  animation-delay: 0.8s;
-}
-
 .menuItems__card {
   border-radius: 15.04px;
   display: flex;
@@ -435,11 +429,44 @@ body {
   width: 93%;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   overflow: hidden; /*pour cacher tout ce qui dépasse de la card*/
+  animation: appear 1s both;
 }
-.menuItems__card:hover .menuItems__check {
+.menuItems__card:active .menuItems__check {
   margin-right: 0;
 }
-
+.menuItems__card:nth-child(0) {
+  animation-delay: 0ms;
+}
+.menuItems__card:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menuItems__card:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menuItems__card:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menuItems__card:nth-child(4) {
+  animation-delay: 400ms;
+}
+.menuItems__card:nth-child(5) {
+  animation-delay: 500ms;
+}
+.menuItems__card:nth-child(6) {
+  animation-delay: 600ms;
+}
+.menuItems__card:nth-child(7) {
+  animation-delay: 700ms;
+}
+.menuItems__card:nth-child(8) {
+  animation-delay: 800ms;
+}
+.menuItems__card:nth-child(9) {
+  animation-delay: 900ms;
+}
+.menuItems__card:nth-child(10) {
+  animation-delay: 1000ms;
+}
 .menuItems__content {
   width: 81%;
   display: flex;
@@ -449,25 +476,21 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .menuItems__title {
   margin: 0;
   white-space: nowrap;
   font-size: 18px;
   font-weight: 500;
 }
-
 .menuItems__subtitle {
   margin: 0;
   white-space: nowrap;
   font-size: 15.04px;
   font-weight: 300;
 }
-
 .menuItems__price {
   padding-top: 20px;
 }
-
 .menuItems__check {
   background-color: #99E2D0;
   width: 20%;
@@ -480,11 +503,10 @@ body {
   justify-content: center;
   animation-fill-mode: both;
 }
-
 .menuItems__icon {
   border-radius: 50%;
   background-color: #99E2D0;
-  color: white;
+  color: #FFFFFF;
   transition-duration: 0.5s;
   font-size: 20px;
 }
@@ -499,29 +521,26 @@ body {
 .badge {
   position: absolute;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 /*footer*/
 .footer {
   background-color: #353535;
   height: 186px;
-  color: white;
+  color: #FFFFFF;
   padding: 22px 25px 22px 25px;
 }
-
 .footer__content {
   display: flex;
   flex-direction: column;
 }
-
 .footer__logo {
   height: 27px;
   font-family: "Shrikhand";
   font-size: 18px;
 }
-
 .footer__link {
   display: flex;
   flex-direction: column;
@@ -529,29 +548,26 @@ body {
   height: 99px;
   padding-top: 20px;
 }
-
 .footer__link--icon {
   display: flex;
   flex-direction: column;
   height: 19px;
   gap: 16px;
 }
-
-.icon-space {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
 .footer__link--text {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
 .footer__link--color {
   color: inherit;
   text-decoration: none;
+}
+
+.icon-space {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=mobile.css.map */
