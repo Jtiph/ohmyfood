@@ -7,7 +7,6 @@
     width: 100%;
     max-width: 1440px;
     min-width: 375px;
-    height: 1200px; 
 }
 
 body{
@@ -75,6 +74,7 @@ $mint: #99E2D0;
     font-size: 16px;
     font-weight: 500;
     border: $main-color;
+    transition-duration: 0.25s;
 }
 @mixin badge{
     position: absolute;
@@ -85,7 +85,7 @@ $mint: #99E2D0;
 @mixin badge-purple{
     background-color: $main-color;
     color: $white;
-    width: 9%;
+    width: 8%;
     height: 26px;
     right: 96%;
     border-radius: 50px;
@@ -212,6 +212,7 @@ $mint: #99E2D0;
 
     &__title {
         font-size: 24px;
+        width: 100%;
     } 
     
     &__subtitle {
@@ -418,7 +419,7 @@ $mint: #99E2D0;
     &__header{
         display: flex;
         gap: 15px;
-        margin-top: 32px;
+        margin-top: 22px;
     }
     
     &__title{
@@ -436,7 +437,7 @@ $mint: #99E2D0;
         background: none;
         cursor: pointer; 
         position: relative;
-        width: 20%;
+        left: -14%;
         
     }
 }
@@ -474,12 +475,22 @@ $mint: #99E2D0;
     margin-top: 73px;
     
     &__title{
-    width: 12%;
     height: 27px;
     font-weight: 300;
     font-size: 16px;
-    border-bottom: 3px solid $mint;
-    margin-left: 20px;
+    position: relative;
+    margin-left: 4%;
+    &::after{
+            content:"";
+            position: absolute;
+            display: inline;
+            height: 5px;
+            background-color: $mint;
+            bottom: -5%;
+            width: 12%;
+            left: 0;
+            max-width: 42px;
+    }
 }
 }
 
@@ -496,9 +507,10 @@ $mint: #99E2D0;
         box-shadow: 0px 4.01px 15.04px 0px #0000001A;
         overflow: hidden; /*pour cacher tout ce qui dépasse de la card*/
         animation: appear 1s both;
+        position: relative;
         &:active .menuItems__check{
-            margin-right: 0;       
-        }
+            right: 0;       
+        } 
         @for $i from 0 through 10 {
             &:nth-child(#{$i}){
                 animation-delay: 100ms * $i;
@@ -534,12 +546,13 @@ $mint: #99E2D0;
     width: 20%;
     height: 100%;
     border-radius: 0px 15px 15px 0px;
-    margin-right: -5rem;
     transition-duration: 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
     animation-fill-mode: both;
+    position: absolute;
+    right: -20%;
     }
     &__icon{
         border-radius: 50%;

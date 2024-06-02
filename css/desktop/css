@@ -63,8 +63,8 @@
     width: 35%;
   }
   /*restaurants*/
-  .header__menu {
-    gap: 572px;
+  .header__menu--logo {
+    width: 100%;
   }
   .menu__header {
     justify-content: center;
@@ -86,12 +86,15 @@
     width: 5%;
     margin-left: 144px;
   }
-  .menuItems__content {
-    width: 90%;
-  }
   .menuItems__card {
     width: 70%;
     gap: 16px;
+  }
+  .menuItems__card:hover .menuItems__check {
+    margin-left: 0;
+  }
+  .menuItems__content {
+    width: 90%;
   }
   .menu__btn {
     width: 5%;
@@ -102,9 +105,6 @@
   }
   .menu__btn:hover .menu__like--nobg {
     opacity: 0;
-  }
-  .menuItems__check {
-    width: 10%;
   }
   .menu__like--bg {
     left: 25%;
@@ -130,17 +130,17 @@
   .footer__link--icon {
     flex-direction: row;
   }
-  .icon-space {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
   .footer__link--text {
     flex-direction: row;
   }
   .footer__link--color {
     color: inherit;
     text-decoration: none;
+  }
+  .icon-space {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
   }
 }
 
