@@ -5,11 +5,11 @@
 
 .main-container {
     width: 100%;
-    max-width: 1440px;
-    min-width: 375px;
+    max-width: 1920px;
+    min-width: 320px;
 }
 
-body{
+html, body{
     margin: 0;
 }
 
@@ -35,6 +35,11 @@ $mint: #99E2D0;
 @mixin just-column{
     display: flex;
     flex-direction: column;
+}
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @mixin loader{
     position: fixed;
@@ -82,11 +87,12 @@ $mint: #99E2D0;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 @mixin badge-purple{
     background-color: $main-color;
     color: $white;
-    width: 26px;
+    max-width: 26px;
     height: 26px;
     right: 96%;
     border-radius: 50px;
@@ -98,10 +104,11 @@ $mint: #99E2D0;
     text-align: center;
     border-radius: 5px;
     color: #008766;
-    width: 80px;
+    max-width: 80px;
     height: 29px;
-    left: 67%;
+    right: 5%;
     top: 5%;
+    font-size: 14px;
 }
 @mixin menu-logo{
     height: 36px;
@@ -151,17 +158,6 @@ $mint: #99E2D0;
     }
 }
 
-@keyframes slow-appear {
-    0% {
-        transform: scale(0);
-    }
-    50%{
-        transform:scale(0.5)
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 
 
 /*loader*/
@@ -235,6 +231,10 @@ $mint: #99E2D0;
         background-color: $white;
         @include box-shadow-black;
     }
+    
+}
+.btn-explorer{
+    max-width: 218px;
 }
 
 /*****SECTION FONCTIONNEMENT******/
@@ -270,23 +270,40 @@ $mint: #99E2D0;
     }
     &__content{
         @include flex-container($direction:row);
-        gap: 25px;
-        width: 79%;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
     }
                 
     &__icon{
         color: #7E7E7E;
         font-size: 20px;
+        cursor: pointer;
+
         &--lieu{
             font-size: 18px;
         }
     }
                 
-    &--text{
+    &__text{
         font-size: 16px;
         font-weight: 500;   
     }
-}   
+    .tuto-icon-label{
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        
+        .tuto-checkbox{
+            display: none;
+        }
+
+        .tuto-checkbox:checked + .tuto__icon{
+            color: $main-color;
+        }
+    } 
+}  
+
 
 .badge-purple{
     @include badge-purple;
@@ -311,7 +328,7 @@ $mint: #99E2D0;
 }
 
 .card {
-    width: 93%;
+    width: 95%;
     height: 251px;
     border-radius: 20px;
     background-color: $white;
@@ -333,7 +350,7 @@ $mint: #99E2D0;
         gap: 8px;
         padding-left: 15px;
         padding-top: 5px;
-        width: 79%;
+        width: 100%;
     } 
     &__title {
         font-weight: 500;
@@ -349,34 +366,39 @@ $mint: #99E2D0;
     }
 }
 
-.btn__like {
-    background: none;
-    border: none;
-    font-size: 22px;
+.like-btn{
+    display: inline-block;
     cursor: pointer;
     position: relative;
-    &--nobg{
-        &:active{
-            opacity: 0;
+    right: 13%;
+    .like-checkbox{
+        display: none; /*cacher la checkbox elle-même*/
+    }
+    .heart-icon{
+        position: relative;
+        display: inline-block;
+        font-size: 22px; 
+        bottom: -3%;
+        
+        .empty-heart{
+            opacity: 1; /*le coeur vide est visible par défaut*/
+            position: absolute;
+        }
+        .fill-heart{
+            opacity: 0; /*le coeur rempli est caché par défaut*/
+            color: transparent;
+            background-image: linear-gradient($pink, $main-color);
+            background-clip: text;
+            position: absolute;
         }
     }
-    &--bg{
-        color: transparent;
-        background-image: linear-gradient($pink, $main-color);
-        background-clip: text;
-        -webkit-background-clip: text;
-        position: absolute;
-        opacity: 0;
-        bottom: 30%;
-        left: 12%;
-        font-size: 23px;
-        &:active{
-            opacity: 1;
-        }
+    .like-checkbox:checked + .heart-icon .empty-heart {
+        opacity: 0; /*lorsque la checkbox est cochée, le coeur vide disparait*/
     }
-
+    .like-checkbox:checked + .heart-icon .fill-heart{
+        opacity: 1; /*lorsque la checkbox est cochée, le coeur rempli devient visble*/
+    }
 }
-
 .badge-vert {
     @include badge-vert;
 
@@ -394,10 +416,9 @@ $mint: #99E2D0;
 
     &--icon{
         font-size: 17.02px;
-        margin-left: 15px;
         color: black;
         position: absolute;
-        left: 0;
+        left: 3%;
         bottom: 39%;
     }
     &--logo{
@@ -433,44 +454,17 @@ $mint: #99E2D0;
         font-family: 'Shrikhand', sans-serif;
         font-weight: 400;
         font-size: 28px;
-        padding-left: 17px;
+        padding-left: 12px;
         margin: 0;
         width: 100%;
     }
-    &__btn{
-        font-size: 25px;
-        border: none;
-        background: none;
-        cursor: pointer; 
-        position: relative;
-        left: -14%;
-        
+}
+.like-menu{
+    right: 11%;
+    .heart-menu{
+        bottom: 25%;
     }
 }
-
-.menu__like--nobg{
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    &:active{
-        opacity: 0;
-    }
-
-}
-.menu__like--bg {
-    color: transparent;
-    background-image: linear-gradient($pink, $main-color);
-    background-clip: text;
-    -webkit-background-clip: text; /*élement pour que ce soit adapter à tous les navigateurs*/
-    position: absolute;
-    border: transparent;
-    top: 18%;
-    left: 25%;
-    opacity: 0;
-    &:active{
-        opacity: 1;
-    }
- }
 
 .submenu{
     gap: 12px;
@@ -511,11 +505,12 @@ $mint: #99E2D0;
         height: 69px;
         width: 93%;
         box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+        cursor: pointer;
         overflow: hidden; /*pour cacher tout ce qui dépasse de la card*/
-        animation: appear 1s both;
+        animation: appear 0.30s both;
         position: relative;
         &:active .menuItems__check{
-            right: 0;       
+            margin-right: 0;      
         } 
         @for $i from 0 through 10 {
             &:nth-child(#{$i}){
@@ -536,42 +531,51 @@ $mint: #99E2D0;
         white-space: nowrap;
         font-size: 18px;
         font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__subtitle{
         margin: 0;
         white-space: nowrap;
         font-size: 15.04px;
         font-weight: 300;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__price{
         padding-top: 20px;
+        width: 15%;
+        white-space: nowrap;
+        margin-left: 15%;
     }
 
     &__check{
     background-color: $mint;
-    width: 20%;
+    width: 100%;
     height: 100%;
+    max-width: 59px;
     border-radius: 0px 15px 15px 0px;
     transition-duration: 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     animation-fill-mode: both;
-    position: absolute;
-    right: -20%;
+    margin-right: -20%;
     }
     &__icon{
         border-radius: 50%;
         background-color: $mint;
         color: $white;
-        transition-duration: 0.5s;
+        transition: 0.3s;
         font-size: 20px;
     }
 }
-.cmd__btn{
+.commander{
     display: flex;
     justify-content: center;
     margin-top: 70px;
+
+    .btn-cmd{
+        max-width: 186px;
+    }
 }
 
 /*badge*/

@@ -34,10 +34,13 @@
             <div class="menu">
                 <div class="menu__header">
                     <h1 class="menu__title">À la française</h1>
-                    <button class="menu__btn">
-                        <i class="fa-regular fa-heart menu__like menu__like--nobg "></i>
-                        <i class="fa-solid fa-heart menu__like menu__like--bg "></i>
-                    </button>
+                    <label class="like-btn like-menu">
+                        <input type="checkbox" class="like-checkbox">
+                        <span class="heart-icon heart-menu">
+                            <i class="fa-regular fa-heart empty-heart"></i>
+                            <i class="fa-solid fa-heart fill-heart"></i>
+                        </span>
+                    </label>
                 </div>
                 <section class="submenu">
                     <h2 class="submenu__title">ENTRÉES</h2>
@@ -46,8 +49,8 @@
                             <div class="menuItems__content">
                                 <h3 class="menuItems__title">Tartare de poulpe acidulé</h3>
                                 <p class="menuItems__subtitle">Aux zestes d'orange</p>
-                            </div>
-                            <p class="menuItems__price">25€</p>
+                            </div>                          
+                            <span class="menuItems__price">25€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                         <div class="menuItems__card">
@@ -55,7 +58,7 @@
                                 <h3 class="menuItems__title">Velouté de légumes d'antan</h3>
                                 <p class="menuItems__subtitle">Carotte, panais, topinambour</p>
                             </div>
-                            <p class="menuItems__price">35€</p>
+                            <span class="menuItems__price">35€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                         <div class="menuItems__card">
@@ -63,7 +66,7 @@
                                 <h3 class="menuItems__title">Soupe à l'oignon</h3>
                                 <p class="menuItems__subtitle">Revisitée</p>
                             </div>
-                            <p class="menuItems__price">20€</p>
+                            <span class="menuItems__price">20€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                     </div>
@@ -76,7 +79,7 @@
                                 <h3 class="menuItems__title">Coquilles Saint-Jacques</h3>
                                 <p class="menuItems__subtitle">Accompagnées d'une purée de panais</p>
                             </div>
-                            <p class="menuItems__price">40€</p>
+                            <span class="menuItems__price">40€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                         <div class="menuItems__card">
@@ -84,7 +87,7 @@
                                 <h3 class="menuItems__title">Magret de canard</h3>
                                 <p class="menuItems__subtitle">Et parmentier de pommes de terre</p>
                             </div>
-                            <p class="menuItems__price">35€</p>
+                            <span class="menuItems__price">35€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                         <div class="menuItems__card">
@@ -92,7 +95,7 @@
                                 <h3 class="menuItems__title">Pigeonneau d’Ille-et-Vilaine</h3>
                                 <p class="menuItems__subtitle">Sur son lit de gnocchis aux légumes</p>
                             </div>
-                            <p class="menuItems__price">44€</p>
+                            <span class="menuItems__price">44€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                     </div>
@@ -105,7 +108,7 @@
                                 <h3 class="menuItems__title">Pétales de violettes glacés</h3>
                                 <p class="menuItems__subtitle">Et purée de noisettes</p>
                             </div>
-                            <p class="menuItems__price">18€</p>
+                            <span class="menuItems__price">18€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                         <div class="menuItems__card">
@@ -113,7 +116,7 @@
                                 <h3 class="menuItems__title">Fondant au chocolat</h3>
                                 <p class="menuItems__subtitle">Revisitée</p>
                             </div>
-                            <p class="menuItems__price">22€</p>
+                            <span class="menuItems__price">22€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                         <div class="menuItems__card">
@@ -121,13 +124,13 @@
                                 <h3 class="menuItems__title">Millefeuille croustillant</h3>
                                 <p class="menuItems__subtitle">Myrtilles et pâte d’amande</p>
                             </div>
-                            <p class="menuItems__price">23€</p>
+                            <span class="menuItems__price">23€</span>
                             <div class="menuItems__check"><i class="fa-solid fa-circle-check menuItems__icon"></i></div>
                         </div>
                     </div>
                 </section>
-                <section class="cmd__btn">
-                    <button class="btn__purple">Commander</button>
+                <section class="commander">
+                    <button class="btn__purple btn-cmd">Commander</button>
                 </section>
             </div>
         </main>
@@ -147,7 +150,7 @@
                     </div>
                     <div class="footer__link--text">
                         <a class="footer__link--color" href="#">Mentions légales</a>
-                        <a class="footer__link--color" href="#">Contact</a>
+                        <a class="footer__link--color" href="mailto:contact@ohmyfood.com">Contact</a>
                     </div>
                 </div>
             </div>

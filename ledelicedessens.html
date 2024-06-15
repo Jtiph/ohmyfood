@@ -29,10 +29,13 @@
            <div class="menu">
                <div class="menu__header">
                    <h1 class="menu__title">Le délice des sens</h1>
-                   <button class="menu__btn">
-                    <i class="fa-regular fa-heart menu__like menu__like--nobg"></i>
-                    <i class="fa-solid fa-heart menu__like menu__like--bg"></i>
-                               </button>
+                   <label class="like-btn like-menu">
+                    <input type="checkbox" class="like-checkbox">
+                    <span class="heart-icon heart-menu">
+                        <i class="fa-regular fa-heart empty-heart"></i>
+                        <i class="fa-solid fa-heart fill-heart"></i>
+                    </span>
+                </label>
                </div>
            <section class="submenu">
                 <h2 class="submenu__title">ENTRÉES</h2>
@@ -121,8 +124,8 @@
                 </div>
             </div>
    </section>
-    <section class="cmd__btn">
-   <button class="btn__purple">Commander</button>
+    <section class="commander">
+   <button class="btn__purple btn-cmd">Commander</button>
     </section> 
 </div>       
         </main>
@@ -142,7 +145,7 @@
                     </div>               
                     <div class="footer__link--text">
                         <a class="footer__link--color" href="#">Mentions légales</a>
-                        <a class="footer__link--color" href="#">Contact</a>
+                        <a class="footer__link--color" href="mailto:contact@ohmyfood.com">Contact</a>
                     </div>
                 </div>
             </div>

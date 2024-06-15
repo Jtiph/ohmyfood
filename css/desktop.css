@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1920px) {
   .main-container {
     height: 1395px;
   }
@@ -20,9 +20,9 @@
   }
   .header__icon {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 17px;
     background-color: #EAEAEA;
     width: 100%;
@@ -55,6 +55,9 @@
   }
   .tuto__step {
     width: 23%;
+  }
+  .tuto__icon:hover {
+    color: #9356DC;
   }
   .restaurants {
     margin-top: 0;
@@ -119,13 +122,13 @@
     justify-content: center;
     padding: 0;
   }
-  .menu__btn {
-    left: 0;
+  .like-btn {
+    right: 5%;
   }
-  .menu__like--nobg:hover {
+  .like-btn .empty-heart:hover {
     opacity: 0;
   }
-  .menu__like--bg:hover {
+  .like-btn .fill-heart:hover {
     opacity: 1;
   }
   .submenu {
@@ -144,7 +147,7 @@
     max-width: 634px;
   }
   .menuItems__card:hover .menuItems__check {
-    right: 0;
+    margin-right: 0;
   }
   .btn__purple:hover {
     background-color: #FFFFFF;
@@ -153,9 +156,12 @@
   .menuItems__content {
     width: 90%;
   }
+  .menuItems__price {
+    width: 5%;
+    margin-left: 5%;
+  }
   .menuItems__check {
-    right: -20%;
-    width: 10%;
+    margin-right: -10%;
   }
   .footer {
     height: 114px;

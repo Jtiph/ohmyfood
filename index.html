@@ -32,7 +32,7 @@
             <section class="hero">
                 <h1 class="hero__title"> Réservez le menu qui vous convient</h1>
                 <p class="hero__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button class="btn__purple"> Explorer nos restaurants</button>
+                <button class="btn__purple btn-explorer"> Explorer nos restaurants</button>
             </section> 
             <section class="tuto">
                 <h1 class="tuto__title">Fonctionnement</h1>
@@ -40,22 +40,30 @@
                     <div class="tuto__step">
                         <span class="badge badge-purple">1</span>
                         <div class="tuto__content">
-                            <i class="fa-solid fa-mobile-screen-button tuto__icon"></i>
+                            <label class="tuto-icon-label">
+                                <input type="checkbox" class="tuto-checkbox">
+                                <i class="fa-solid fa-mobile-screen-button tuto__icon"></i>
+                            </label>
                             <p class="tuto__text">Choisissez un restaurant</p>
-                        </div>
-                    
+                        </div>      
                     </div>
                     <div class="tuto__step">
                         <span class="badge badge-purple">2</span>
                         <div class="tuto__content">
-                            <i class="fa-solid fa-list-ul tuto__icon"></i>
+                            <label class="tuto-icon-label">
+                                <input type="checkbox" class="tuto-checkbox">
+                                <i class="fa-solid fa-list-ul tuto__icon"></i>
+                            </label>
                             <p class="tuto__text">Composez votre menu</p>
                         </div>
                     </div>
                     <div class="tuto__step">
                         <span class="badge badge-purple">3</span>
                          <div class="tuto__content">
-                             <i class="fa-solid fa-store tuto__icon"></i>
+                            <label class="tuto-icon-label">
+                                <input type="checkbox" class="tuto-checkbox">
+                                <i class="fa-solid fa-store tuto__icon"></i>
+                            </label>
                              <p class="tuto__text">Dégustez au restaurant</p>
                          </div>
                     </div>
@@ -73,9 +81,13 @@
                                 <h2 class="card__title">La palette du goût</h2>
                                 <p class="card__subtitle">Ménilmontant</p>
                             </div>
-                            <button class="btn__like">
-                            <i class="fa-regular fa-heart empty-heart btn__like--nobg"></i>
-                        <i class="fa-solid fa-heart full-heart btn__like--bg"></i></button>
+                            <label class="like-btn">
+                                <input type="checkbox" class="like-checkbox">
+                                <span class="heart-icon">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart fill-heart"></i>
+                                </span>
+                            </label>
                         </div>
                     </div>
                     <div class="card">
@@ -89,9 +101,13 @@
                                 <h2 class="card__title">La note enchantée</h2>
                                 <p class="card__subtitle">Charonne</p>
                             </div>
-                            <button class="btn__like">
-                                <i class="fa-regular fa-heart empty-heart btn__like--nobg"></i>
-                            <i class="fa-solid fa-heart full-heart btn__like--bg"></i></button>
+                            <label class="like-btn">
+                                <input type="checkbox" class="like-checkbox">
+                                <span class="heart-icon">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart fill-heart"></i>
+                                </span>
+                            </label>
                         </div>
                     </div>
                     <div class="card">
@@ -104,9 +120,13 @@
                                 <h2 class="card__title">À la française</h2>
                                 <p class="card__subtitle">Cité rouge</p>
                             </div>
-                            <button class="btn__like">
-                                <i class="fa-regular fa-heart empty-heart btn__like--nobg"></i>
-                            <i class="fa-solid fa-heart full-heart btn__like--bg"></i></button>
+                            <label class="like-btn">
+                                <input type="checkbox" class="like-checkbox">
+                                <span class="heart-icon">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart fill-heart"></i>
+                                </span>
+                            </label>
                         </div>
                     </div>
                     <div class="card">
@@ -119,9 +139,13 @@
                                 <h2 class="card__title">Le délice des sens</h2>
                                 <p class="card__subtitle">Folie-Méricourt</p>
                             </div>
-                            <button class="btn__like">
-                                <i class="fa-regular fa-heart empty-heart btn__like--nobg"></i>
-                            <i class="fa-solid fa-heart full-heart btn__like--bg"></i></button>
+                            <label class="like-btn">
+                                <input type="checkbox" class="like-checkbox">
+                                <span class="heart-icon">
+                                    <i class="fa-regular fa-heart empty-heart"></i>
+                                    <i class="fa-solid fa-heart fill-heart"></i>
+                                </span>
+                            </label>
                         </div>
                     </div>
                 </div>
