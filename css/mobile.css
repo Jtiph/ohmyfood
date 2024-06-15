@@ -126,7 +126,6 @@ html, body {
 
 .btn__purple {
   width: 100%;
-  max-width: 186px;
   height: 50px;
   border-radius: 50px;
   background: linear-gradient(#ff79da, #9356DC);
