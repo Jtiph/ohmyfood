@@ -1,6 +1,7 @@
 # OhMyFood 🍽️
 
 Site responsive de réservation de restaurants gastronomiques permettant aux utilisateurs de consulter les menus et préparer leur commande avant leur arrivée.
+<img width="1852" height="933" alt="image" src="https://github.com/user-attachments/assets/963299ce-0793-4ade-9ed2-ddeaae4ae03e" />
 
 ## Features
 
